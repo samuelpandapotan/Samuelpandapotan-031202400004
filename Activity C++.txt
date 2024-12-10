@@ -1,0 +1,106 @@
+Activity #1
+#include <iostream>
+#include <string>
+
+class Car {
+public:
+    std::string brand;
+    std::string model;
+    int year;
+
+    void displayInfo() {
+        std::cout << "Car Details:" << std::endl;
+        std::cout << "Brand: " << brand << std::endl;
+        std::cout << "Model: " << model << std::endl;
+        std::cout << "Year: " << year << std::endl;
+    }
+};
+
+int main() {
+    Car myCar;
+
+    myCar.brand = "Toyota";
+    myCar.model = "Corolla";
+    myCar.year = 2020;
+
+    myCar.displayInfo();
+
+    return 0;
+}
+
+
+
+Activity #2
+#include <iostream>
+#include <string>
+
+class Book {
+public:
+    std::string title;
+    std::string author;
+    double price;
+
+    void displayDetails() {
+        std::cout << "Book Details:" << std::endl;
+        std::cout << "Title: " << title << std::endl;
+        std::cout << "Author: " << author << std::endl;
+        std::cout << "Price: $" << price << std::endl;
+    }
+};
+
+int main() {
+    Book book1, book2;
+
+    book1.title = "The Great Gatsby";
+    book1.author = "F. Scott Fitzgerald";
+    book1.price = 10.99;
+
+    book2.title = "To Kill a Mockingbird";
+    book2.author = "Harper Lee";
+    book2.price = 12.49;
+
+    std::cout << "Details of Book 1:\n";
+    book1.displayDetails();
+
+    std::cout << "\nDetails of Book 2:\n";
+    book2.displayDetails();
+
+    return 0;
+}
+
+
+Activity #3
+
+#include <iostream>
+
+class Rectangle {
+private:
+    double length;
+    double width;
+
+public:
+    void setDimensions(double l, double w) {
+        length = l;
+        width = w;
+    }
+
+    double calculateArea() {
+        return length * width;
+    }
+
+    void displayArea() {
+        std::cout << "The area of the rectangle is: " << calculateArea() << std::endl;
+    }
+};
+
+int main() {
+    Rectangle rect;
+
+    rect.setDimensions(5.0, 3.0);
+
+    rect.displayArea();
+
+    return 0;
+}
+
+
